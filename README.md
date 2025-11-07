@@ -2,7 +2,9 @@
 
 ## Introduction
 
-Emma is a file format for representing 3D applications: scene graph, code and user interaction. It is translated into Javascript code that runs inside a three.js runtime environment inside a web browser. This repository has all the documentation descibing what Emma is and now to use it to build applications. It also has the application that converts Emma into Javascript.
+Emma (Extensible MultiMedia Architecture) is a file format for representing 3D applications: scene graph, code and user interaction. It is translated into Javascript code that runs inside a three.js runtime environment inside a web browser. Emma is extensible, meaning you can write new nodes and include them in your application. And it is multimedia since you can include audio, video and other media types in your applications.
+
+This repository has all the documentation descibing what Emma is and now to use it to build applications. It also has the application that converts Emma into Javascript.
 
 ## History
 
@@ -14,5 +16,5 @@ Many One imploded under the guidance of Joe, which anyone with 2 brain cells to 
 
 Emma is an outgrowth of the VRML and X3D formats. It looks more like the former than the latter, which is XML based. XML has a lot of advantages in tools that allow you to edit and process the files. But I find it much too arcane to be readable, and readability was one of my goals. But in developing Emma back in 2005 we did create an XML variant so it would be easy to revive that.
 
-
+ 
 
