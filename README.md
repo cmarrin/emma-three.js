@@ -16,9 +16,33 @@ Many One imploded under the guidance of Joe, which anyone with 2 brain cells to 
 
 Emma is an outgrowth of the VRML and X3D formats. It looks more like the former than the latter, which is XML based. XML has a lot of advantages in tools that allow you to edit and process the files. But I find it much too arcane to be readable, and readability was one of my goals. But in developing Emma back in 2005 we did create an XML variant so it would be easy to revive that.
 
+Here's a simple example of an Emma file
+
+	#Emma V0.3 utf8
+
+	Shape {
+		material Material { diffuse Color.red }
+		geometry Box {
+			size 1 2 3
+		}
+	}	
+
+This simple scene graph contains a single Shape node with a red Material and and Box geometry.
+
 ### Prototypes
 
 A prototype (PROTO) adds a new node type to the system. You add fields for input and output, nodes for functionality and code for processing. Here's an example:
+
+	#Emma V0.3 utf8
+	
+	// Spinning Box Test
+
+	function initialize ( ) {
+	console.log();
+	console.log("Spinning Box Test");
+	console.log("You should see a spinning box" );
+	console.log();
+}
 
 	PROTO Spinner [
 		field SFFloat speed 1
@@ -31,21 +55,23 @@ A prototype (PROTO) adds a new node type to the system. You add fields for input
 			loop true
 			interval FROM TOP.rate
 			fraction DO {
-				TOP.S.rotation =
+				TOP.G.rotation =
 					{ 0, 1, 0, Math.PI * 2 * self.fraction }
 			}
 		}
 	]
 	
-	PROTO Box “protos@Box.ema”
-	
 	Spinner {
-		children Box {
-			size 1 2 3
+		children Shape {
+			material Material { diffuse Color.red }
+
+			geometry Box {
+				size 1 2 3
+			}
 		}
 	}
 
-This example introduces 2 prototypes. The first is called Spinner and is defined in the file. The second is called Box and is defined in a separate file called "Box.ema", which can be found at a known location where prototypes are stored. At the end of the file the Spinner node is instantiated and the Box node is its child. When run the box spins at the default speed of 1.
+This example introduces the Spinner prototype. At the end of the file the Spinner node is instantiated with a Shape containing a built-in Box node whose color is set to red as its child. When run the box spins at the default speed of 1.
 
 ## Learn More
 
