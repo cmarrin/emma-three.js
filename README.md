@@ -20,6 +20,8 @@ Here's a simple example of an Emma file
 
 	#Emma V0.3 utf8
 
+	// Simple Red Box Test
+
 	Shape {
 		material Material { diffuse Color.red }
 		geometry Box {
@@ -38,11 +40,11 @@ A prototype (PROTO) adds a new node type to the system. You add fields for input
 	// Spinning Box Test
 
 	function initialize ( ) {
-	console.log();
-	console.log("Spinning Box Test");
-	console.log("You should see a spinning box" );
-	console.log();
-}
+		console.log();
+		console.log("Spinning Box Test");
+		console.log("You should see a spinning box" );
+		console.log();
+	}
 
 	PROTO Spinner [
 		field SFFloat speed 1
@@ -72,6 +74,8 @@ A prototype (PROTO) adds a new node type to the system. You add fields for input
 	}
 
 This example introduces the Spinner prototype. At the end of the file the Spinner node is instantiated with a Shape containing a built-in Box node whose color is set to red as its child. When run the box spins at the default speed of 1.
+
+Notice the 2 bits of Javascript code in the example. The first is an initialize function which is run after the file is loaded. The second is inside a DO instruction which runs whenever the function field changes, which is on every frame. It computes the rotation values that cause the box to rotate about the Y axis.
 
 ## Learn More
 
