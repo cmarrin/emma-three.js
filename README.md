@@ -16,5 +16,28 @@ Many One imploded under the guidance of Joe, which anyone with 2 brain cells to 
 
 Emma is an outgrowth of the VRML and X3D formats. It looks more like the former than the latter, which is XML based. XML has a lot of advantages in tools that allow you to edit and process the files. But I find it much too arcane to be readable, and readability was one of my goals. But in developing Emma back in 2005 we did create an XML variant so it would be easy to revive that.
 
+### Prototypes
+
+A prototype (PROTO) adds a new node type to the system. You add fields for input and output, nodes for functionality and code for processing. Here's an example:
+
+PROTO Spinner [
+field SFFloat speed 1
+field MFNode children [ ]
+DEF G Group { children FROM TOP.children }
+Timer {
+loop true
+interval FROM TOP.rate
+fraction DO {
+TOP.S.rotation =
+{ 0,1,0,Math.PI*2*self.fraction }
+}
+]
+PROTO Box “protos@Box.ema”
+Spinner { children Box { size 1 2 3 } }
+
  
+
+ ## Learn More
+
+ As I said, Emma started way back in 2005. All the work done back then is available in the Emma3D GitHub repository. I've included a cleaned up version of the white paper we wrote back then in this repo. You can view it at Emma White Paper.
 
