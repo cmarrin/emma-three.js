@@ -20,24 +20,35 @@ Emma is an outgrowth of the VRML and X3D formats. It looks more like the former 
 
 A prototype (PROTO) adds a new node type to the system. You add fields for input and output, nodes for functionality and code for processing. Here's an example:
 
-PROTO Spinner [
-field SFFloat speed 1
-field MFNode children [ ]
-DEF G Group { children FROM TOP.children }
-Timer {
-loop true
-interval FROM TOP.rate
-fraction DO {
-TOP.S.rotation =
-{ 0,1,0,Math.PI*2*self.fraction }
-}
-]
-PROTO Box “protos@Box.ema”
-Spinner { children Box { size 1 2 3 } }
+	PROTO Spinner [
+		field SFFloat speed 1
+		field MFNode children [ ]
+		DEF G Group {
+			children FROM TOP.children
+		}
+		
+		Timer {
+			loop true
+			interval FROM TOP.rate
+			fraction DO {
+				TOP.S.rotation =
+					{ 0, 1, 0, Math.PI * 2 * self.fraction }
+			}
+		}
+	]
+	
+	PROTO Box “protos@Box.ema”
+	
+	Spinner {
+		children Box {
+			size 1 2 3
+		}
+	}
 
- 
+This example introduces 2 prototypes. The first is called Spinner and is defined in the file. The second is called Box and is defined in a separate file called "Box.ema", which can be found at a known location where prototypes are stored. At the end of the file the Spinner node is instantiated and the Box node is its child. When run the box spins at the default speed of 1.
 
- ## Learn More
+## Learn More
 
- As I said, Emma started way back in 2005. All the work done back then is available in the Emma3D GitHub repository. I've included a cleaned up version of the white paper we wrote back then in this repo. You can view it at Emma White Paper.
+As I said, Emma started way back in 2005. All the work done back then is available in the Emma3D GitHub repository. I've included a cleaned up version of the white paper we wrote back then in this repo. You can view it at Emma White Paper.
 
+``
