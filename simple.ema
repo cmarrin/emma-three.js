@@ -1,0 +1,10 @@
+#Emma V0.3 utf8
+
+# Simple Red Box Test
+
+Shape {
+	material Material { diffuse Color.red }
+	geometry Box {
+		size 1 2 3
+	}
+}	
