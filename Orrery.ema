@@ -1,0 +1,33 @@
+#Emma V0.3 utf8
+
+# Orrery
+# 
+# This animates planets and moons around a central sun
+
+Group {
+    DEF Sun Shape {
+        geometry Sphere { }
+    } 
+
+    DEF EarthORbit Group {
+        rotation ON T.fraction { this.y = Math.PI * 2 * T.fraction }
+        children [
+            DEF Earth Shape {
+                geometry Sphere { }
+                position { 10, 0, 0 }
+            }
+            DEF MoonOrbit Group {
+                rotation ON T.fraction { this.y = Math.PI * 2 * T.fraction }
+                children DEF Moon Shape {
+                    geometry Sphere { }
+                    position { 5, 0, 0 }
+                }
+            }
+        ]
+    }
+}
+
+DEF T Timer {
+    loop true
+    interval 1
+}
