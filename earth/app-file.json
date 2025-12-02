@@ -1,0 +1,165 @@
+{
+	"metadata": {
+		"type": "App"
+	},
+	"project": {
+		"shadows": true,
+		"shadowType": 1,
+		"toneMapping": 0,
+		"toneMappingExposure": 1
+	},
+	"camera": {
+		"metadata": {
+			"version": 4.7,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"object": {
+			"uuid": "9f1a8598-3ce3-45f2-96e1-87084c4080c4",
+			"type": "PerspectiveCamera",
+			"name": "Camera",
+			"layers": 1,
+			"matrix": [-0.30430017105983476,0,0.9525761942715951,0,0.8208528446429559,0.5073861016632494,0.2622211877033171,0,-0.4833239217486789,0.8617188310806321,-0.15439767752950972,0,-2.690168751494232,4.796305267821329,-0.859373576814491,1],
+			"up": [0,1,0],
+			"fov": 50,
+			"zoom": 1,
+			"near": 0.01,
+			"far": 1000,
+			"focus": 10,
+			"aspect": 1.3895027624309393,
+			"filmGauge": 35,
+			"filmOffset": 0
+		}
+	},
+	"scene": {
+		"metadata": {
+			"version": 4.7,
+			"type": "Object",
+			"generator": "Object3D.toJSON"
+		},
+		"geometries": [
+			{
+				"uuid": "3e0304e3-d373-4877-b9b2-e733b4a26232",
+				"type": "SphereGeometry",
+				"radius": 1,
+				"widthSegments": 32,
+				"heightSegments": 16,
+				"phiStart": 0,
+				"phiLength": 6.283185307179586,
+				"thetaStart": 0,
+				"thetaLength": 3.141592653589793
+			}],
+		"materials": [
+			{
+				"uuid": "25a9b403-f69a-4ec5-9276-63369dd58932",
+				"type": "MeshLambertMaterial",
+				"color": 16777215,
+				"emissive": 0,
+				"emissiveIntensity": 6.84,
+				"map": "021b21a5-67b3-41e9-86ce-9bd16cd3e6d5",
+				"envMapRotation": [0,0,0,
+					"XYZ"],
+				"reflectivity": 3.68,
+				"refractionRatio": 0.98,
+				"blendColor": 0
+			}],
+		"textures": [
+			{
+				"uuid": "021b21a5-67b3-41e9-86ce-9bd16cd3e6d5",
+				"name": "",
+				"image": "cb3876ee-abfb-4a8a-a141-fef6eb95c313",
+				"mapping": 300,
+				"channel": 0,
+				"repeat": [1,1],
+				"offset": [0,0],
+				"center": [0,0],
+				"rotation": 0,
+				"wrap": [1001,1001],
+				"format": 1023,
+				"internalFormat": null,
+				"type": 1009,
+				"colorSpace": "srgb",
+				"minFilter": 1008,
+				"magFilter": 1006,
+				"anisotropy": 1,
+				"flipY": true,
+				"generateMipmaps": true,
+				"premultiplyAlpha": false,
+				"unpackAlignment": 4
+			}],
+		"images": [
+			{
+				"uuid": "cb3876ee-abfb-4a8a-a141-fef6eb95c313",
+				"url": "Earth512x256.png"
+			}],
+		"object": {
+			"uuid": "ba06fc05-f3b6-4a41-a1dc-93f32fd345d5",
+			"type": "Scene",
+			"name": "Scene",
+			"layers": 1,
+			"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+			"up": [0,1,0],
+			"children": [
+				{
+					"uuid": "49667bdd-c5e1-420d-a8bc-a6da57351a27",
+					"type": "Mesh",
+					"name": "Sphere",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+					"up": [0,1,0],
+					"geometry": "3e0304e3-d373-4877-b9b2-e733b4a26232",
+					"material": "25a9b403-f69a-4ec5-9276-63369dd58932"
+				},
+				{
+					"uuid": "dfdf2fcd-9e09-497b-b562-d5334fa35b0b",
+					"type": "PointLight",
+					"name": "PointLight",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,-2.5954438926388006,2.417236674022071,2.6911967499348526,1],
+					"up": [0,1,0],
+					"color": 16777215,
+					"intensity": 18.8,
+					"distance": 0,
+					"decay": 2,
+					"shadow": {
+						"camera": {
+							"uuid": "b86924b5-721a-4691-812f-d93b3b7afeb0",
+							"type": "PerspectiveCamera",
+							"layers": 1,
+							"up": [0,1,0],
+							"fov": 90,
+							"zoom": 1,
+							"near": 0.5,
+							"far": 500,
+							"focus": 10,
+							"aspect": 1,
+							"filmGauge": 35,
+							"filmOffset": 0
+						}
+					}
+				},
+				{
+					"uuid": "c0c468ca-9329-4f95-8259-e06c3383c621",
+					"type": "AmbientLight",
+					"name": "AmbientLight",
+					"layers": 1,
+					"matrix": [1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1],
+					"up": [0,1,0],
+					"color": 2236962,
+					"intensity": 8.18
+				}],
+			"backgroundRotation": [0,0,0,
+				"XYZ"],
+			"environmentRotation": [0,0,0,
+				"XYZ"]
+		}
+	},
+	"scripts": {
+		"49667bdd-c5e1-420d-a8bc-a6da57351a27": [
+			{
+				"name": "",
+				"source": "function update( event )\n{\n\tthis.rotation.y = event.time / 1000;\n}"
+			}]
+	},
+	"environment": null
+}

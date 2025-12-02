@@ -1,0 +1,21 @@
+{
+  "name": "emma-three",
+  "version": "1.0.0",
+  "description": "Emma (Extensible MultiMedia Architecture) is a file format for representing 3D applications: scene graph, code and user interaction. It is translated into Javascript code that runs inside a three.js runtime environment inside a web browser. Emma is extensible, meaning you can write new nodes and include them in your application. And it is multimedia since you can include audio, video and other media types in your applications.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmarrin/emma-three.js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/cmarrin/emma-three.js/issues"
+  },
+  "homepage": "https://github.com/cmarrin/emma-three.js#readme"
+}
